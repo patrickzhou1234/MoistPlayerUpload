@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Moist Player</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="musicnote.png">
+    <script src="howler.js"></script>
+    <script src="jquery-3.2.1.js"></script>
+  </head>
+  <body onkeydown="checkkey(event)">
+    <input onmouseup="updateTime()" id="musicslider" type="range" min="1" max="100" value="0">
+    <input onmouseup="updateVolume()" id="volumeslider" type="range" min="0" max="100" value="100">
+    <img onclick="togglevolumedisplay()" id="volumeicon" src="volumeicon.png">
+    <span id="title"></span>
+    <img onclick="skip(this.id)" class="pointer" id="backward" src="backward.png">
+    <img onclick="skip(this.id)" class="pointer" id="forward" src="backward.png">
+    <div id="selectorpanel"></div>
+    <div onclick="revealselector()" id="selectortoggle">&gt</div>
+    <div id="container"></div>
+    <img id="art" src="">
+    <a href="https://drive.google.com/u/0/uc?id=1dU7Sdud_rkGclwlC_Wgnl6IqdMg6s8GZ&export=download&confirm=t" target="_blank"><button id="downloadforwin">Download for Windows</button></a>
+    <a href="upload"><button id="uploadbtn">Upload</button></a>
+    <!-- bait mp3 for mediasession-->
+    <audio loop autoplay src="5-minutes-of-silence.mp3"></audio>
+    <script src="script.js"></script>
+    <script type="module">
+      import AudioMotionAnalyzer from './audioMotion-analyzer.js';
+
+      const container = document.getElementById('container');
+      
+      const audioMotion = new AudioMotionAnalyzer(container, {
+        source: Howler.masterGain,
+        fsElement: container,
+        mode: 10,
+        gradient: 'rainbow',
+        lineWidth: 2,
+        fillAlpha: .6,
+        showPeaks: false,
+        showScaleX: false
+      });
+    </script>
+  </body>
+</html>
