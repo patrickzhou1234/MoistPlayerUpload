@@ -1,0 +1,225 @@
+html {
+  background-color: #1D2333;
+}
+
+div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+#musicslider {
+  -webkit-appearance: none;
+  width: 80vw;
+  height: 5vh;
+  position: absolute;
+  top: 90vh;
+  left: 10vw;
+  background: grey;
+  border-radius: 40vw;
+  transition: background-color 0.2s;
+}
+
+#musicslider:focus {
+  outline: none;
+}
+
+#musicslider:hover {
+  cursor: pointer;
+  background: rgb(100, 100, 100);
+}
+
+#musicslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: rgb(0, 217, 255);
+  width: 5vh;
+  height: 5vh;
+  border-radius: 2.5vh;
+  transition: opacity 0.2s;
+}
+
+#musicslider::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#backward {
+  left: 0px;
+  top: calc(98vh - 10vmin);
+}
+
+#forward {
+  left: calc(100vw - 10vmin);
+  top: calc(98vh - 10vmin);
+  transform: scaleX(-1);
+}
+
+.pointer {
+  width: 10vmin;
+  height: 10vmin;
+  position: absolute;
+  transition: opacity 0.2s;
+}
+
+.pointer:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+#title {
+  left: 0px;
+  top: 0px;
+  margin: 0;
+  font-size: calc(2vw + 2vh);
+  color: white;
+}
+
+#volumeslider {
+  -webkit-appearance: none;
+  transform: rotate(-90deg);
+  width: 20vh;
+  height: 0.5vh;
+  position: absolute;
+  left: 0px;
+  top: 65vh;
+  background: white;
+}
+
+#volumeslider:focus {
+  outline: none;
+}
+
+#volumeslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #1D2333;
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+  border: solid white 0.5vh;
+}
+
+#volumeslider::-webkit-slider-thumb:hover {
+  cursor: pointer;
+}
+
+#volumeicon {
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  left: 8vh;
+  top: 80vh;
+  transition: opacity 0.2s;
+}
+
+#volumeicon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+#selectorpanel {
+  width: 50vw;
+  height: 70vh;
+  background-color: black;
+  position: absolute;
+  left: -50vw;
+  top: 10vh;
+  z-index: 1000;
+  color: white;
+  font-size: 6vh;
+  max-height: max-content;
+  overflow-y: scroll;
+}
+
+#selectorpanel::-webkit-scrollbar {
+  width: 2vmin;
+}
+
+#selectorpanel::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 103, 145);
+  border-radius: 10px;
+}
+
+#selectortoggle {
+  position: absolute;
+  background-color: rgb(52, 61, 85);
+  left: 0vw;
+  top: 10vh;
+  color: white;
+  font-size: 10vh;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+#selectortoggle:hover {
+  cursor: pointer;
+  color: rgb(206, 205, 205); 
+  background-color: rgb(54, 66, 99);
+}
+
+#selectortoggle:active {
+  color: rgb(175, 175, 175);
+  background-color: rgb(57, 70, 104)
+}
+
+.songselector {
+  margin: 4vh;
+  transition: color 0.2s;
+}
+
+.songselector:hover {
+  color: rgb(201, 201, 201);
+  cursor: pointer;
+}
+
+#container {
+  height: 50vh;
+  width: 80vw;
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  z-index: -1;
+}
+
+#downloadforwin {
+  position: absolute;
+  right: 0px;
+  background-color: #0099ff;
+  border: none;
+  font-size: calc(1vw + 1vh);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 calc(0.3vw + 0.3vh) #00b3ff;
+  cursor: pointer;
+}
+
+#downloadforwin:active, #uploadbtn:active {
+  top: calc(0.5vh + 0.3vh + 0.3vw);
+  box-shadow: 0 calc(0.2vw + 0.2vh) #00b3ff;
+}
+
+#downloadforwin:focus, #uploadbtn:active {
+  outline: none;
+}
+
+#art {
+  position: absolute;
+  width: 20vmin;
+  height: 20vmin;
+  left: calc(50vw - 10vmin);
+  top: calc(30vh - 22.5vmin);
+  z-index: -1;
+}
+
+#uploadbtn {
+  position: absolute;
+  right: 20vw;
+  background-color: #0099ff;
+  border: none;
+  font-size: calc(1vw + 1vh);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 calc(0.3vw + 0.3vh) #00b3ff;
+  cursor: pointer;
+}
