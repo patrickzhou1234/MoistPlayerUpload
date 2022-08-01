@@ -10,8 +10,8 @@
     <script src="jquery-3.2.1.js"></script>
   </head>
   <body onkeydown="checkkey(event)">
-    <input onmouseup="updateTime()" id="musicslider" type="range" min="1" max="100" value="0">
-    <input onmouseup="updateVolume()" id="volumeslider" type="range" min="0" max="100" value="100">
+    <input oninput="updateTime()" id="musicslider" type="range" min="1" max="100" value="0">
+    <input oninput="updateVolume()" id="volumeslider" type="range" min="0" max="100" value="100">
     <img onclick="togglevolumedisplay()" id="volumeicon" src="volumeicon.png">
     <span id="title"></span>
     <img onclick="skip(this.id)" class="pointer" id="backward" src="backward.png">
